@@ -32,22 +32,22 @@ echo "Getting build code..."
 apt-get update
 apt-get install --no-install-recommends -y wget ca-certificates sudo lsb-release
 
-pushd "$TMPDIR"
-wget -qO- --content-disposition https://github.com/nextcloud/nextcloudpi/archive/"$BRANCH"/latest.tar.gz \
-  | tar -xz \
-  || exit 1
-cd - && cd "$TMPDIR"/nextcloudpi-"$BRANCH"
+#pushd "$TMPDIR"
+#wget -qO- --content-disposition https://github.com/nextcloud/nextcloudpi/archive/"$BRANCH"/latest.tar.gz \
+#  | tar -xz \
+#  || exit 1
+#cd - && cd "$TMPDIR"/nextcloudpi-"$BRANCH"
 
 # install NCP
 echo -e "\nInstalling NextCloudPi..."
 source etc/library.sh
 
 # check distro
-check_distro etc/ncp.cfg || {
-  echo "ERROR: distro not supported:";
-  cat /etc/issue
-  exit 1;
-}
+#check_distro etc/ncp.cfg || {
+#  echo "ERROR: distro not supported:";
+#  cat /etc/issue
+#  exit 1;
+#}
 
 
 mkdir -p /usr/local/etc/ncp-config.d/
