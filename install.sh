@@ -9,7 +9,7 @@
 #
 # more details at https://ownyourbits.com
 
-BRANCH=master
+BRANCH=ubuntu
 #DBG=x
 
 set -e$DBG
